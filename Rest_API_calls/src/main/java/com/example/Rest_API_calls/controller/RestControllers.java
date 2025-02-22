@@ -29,6 +29,13 @@ public class RestControllers {
     public String postmethod(@RequestBody NameRequest request) {
         return "Hello " + request.getName() + " from BridgeLabz";
     }
+
+    //UC05 : PUT Request by RequestBody from /post and RequestParams.
+    @PutMapping("/put/{firstName}")
+    public String updateHello(@PathVariable String firstName, @RequestParam String lastName) {
+        return "Hello " + firstName + " " + lastName + " from BridgeLabz";
+    }
+
 }
 
 //Name Request which will Convert RequestBody raw json data to java object.
