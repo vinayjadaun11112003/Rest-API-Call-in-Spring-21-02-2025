@@ -11,6 +11,12 @@ public class RestControllers {
     public String sayHello() {
         return "Hello from BridgeLabz";
     }
+
+    //GET Request by RequestParameter from /query?name=vinayJadaun
+    @GetMapping("/query")
+    public String sayHelloo(@RequestParam String name) {
+        return "Hello " + name + " from BridgeLabz";
+    }
 }
 
 
