@@ -24,7 +24,7 @@ public class RestControllers {
         return "Hello " + name + " from BridgeLabz";
     }
 
-    //UC04 : GET Request by RequestBody from /post and convert it to the java object by using internal deserialization.
+    //UC04 : POST Request by RequestBody from /post and convert it to the java object by using internal deserialization.
     @PostMapping("/post")
     public String postmethod(@RequestBody NameRequest request) {
         return "Hello " + request.getName() + " from BridgeLabz";
